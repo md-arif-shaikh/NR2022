@@ -1,0 +1,11 @@
+#+TITLE: Introduction to Numerical Relativity
+#+AUTHOR: Md Arif Shaikh
+#+EMAIL: arifshaikh.astro@gmail.com
+
+* About
+This repository hosts codes and resources for the introductory reading course on Numerical Relativity (spring 2022) that I am
+attending at [[https://www.icts.res.in][The International Centre for Theoretical Sciences]], Bengaluru. This course is
+instructed by Dr Prayush Kumar.
+
+* References
+- *Numerical Relativity: solving Einstein's equations on the Computer* by Baumgarte & Shapiro. (Course is based on this book)
