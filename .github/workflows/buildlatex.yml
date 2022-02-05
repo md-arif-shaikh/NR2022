@@ -14,7 +14,7 @@ jobs:
       - name: Compile assignment 1
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: ./assignments/assignment_1.tex
+          root_file: /assignments/assignment_1.tex
 
       - name: Create Release
         id: create_release
@@ -34,6 +34,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }} 
-          asset_path: ./assignments/assignment_1.pdf
+          asset_path: /assignments/assignment_1.pdf
           asset_name: assignment_1.pdf
           asset_content_type: pdf
