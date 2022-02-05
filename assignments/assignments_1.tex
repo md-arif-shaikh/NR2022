@@ -1,0 +1,32 @@
+\documentclass[10pt]{article}
+\usepackage{amsmath}
+\input{style}
+\title{Solution of assignment \#1}
+\begin{document}
+\maketitle
+\begin{enumerate}
+\item
+\item
+\item Using the Bianchi identities,
+  \begin{equation}
+    \label{eq:bianchi-identities}
+    \nabla_e\R{abcd} + \nabla_d\R{abec} + \nabla_c\R{abde} = 0,
+  \end{equation}
+  prove that $\nabla^aG_{ab} = 0$, where
+  \begin{equation}
+    \label{eq:Gab}
+    G_{ab} = \R{ab} - \frac{1}{2}g_{ab} \R{}
+  \end{equation}
+
+  We start by contracting Eq. \eqref{eq:bianchi-identities} with $g^{ac}$ which gives
+  \begin{equation}
+    \label{eq:3-1}
+    \nabla_{e}\R{bd} - \nabla_d \R{be} + \nabla^a\R{abde} = 0
+  \end{equation}
+  where we have used $\R{abcd} = - \R{abdc}$ in the second term. Now we contract Eq. \eqref{eq:3-1} with $g^{eb}$ to get
+  \begin{equation}
+    \label{eq:}
+    2 \nabla^b \R{bd} - \nabla_d \R{} = 0 \Rightarrow \nabla^a\R{ab} - \frac{1}{2} \nabla^a (g_{ab}\R{}) = 0 \Rightarrow \nabla^a G_{ab} = 0
+  \end{equation}
+\end{enumerate}
+\end{document}
