@@ -5,8 +5,46 @@
 \begin{document}
 \maketitle
 \begin{enumerate}
-\item
-\item
+\item Using $\tilde{\omega}^a.\boldsymbol{e}_b = \delta^a_b$, $\boldsymbol{e}_a.\boldsymbol{e}_b = g_{ab}$ and $\tilde{\omega}^a.\tilde{\omega}^b = g^{ab}$, prove that $g^{ab}$ is the inverse of $g_{ab}$.
+  \begin{align}
+    \label{eq:1}
+    g_{ab}g^{bc}
+    & = (\boldsymbol{e}_a . \boldsymbol{e}_b) (\tilde{\omega}^b . \tilde{\omega}^c)\\
+    & = (\boldsymbol{e_a}.\tilde{\omega}^c) (\boldsymbol{e}_b . \tilde{\omega}^b)\\
+    & = \delta^c_a
+  \end{align}
+\item Using the coordinate transformations $\boldsymbol{e}_{a'} = \boldsymbol{e}_{a}M^a_{a'}$, $\tilde{\omega}^{a'} = M^{a'}_{a}\tilde{\omega}^a$ and the inverse matrices $M^{a'}_b = (M^b_{a'})^{-1}$, prove that the components of the vectors, $\boldsymbol{A} = A^ae_a$, dual-vectors, $\tilde{\boldsymbol{B}} = B_b \tilde{\omega}^b$, and mixed tensors, $\boldsymbol{T} = T^a_b e_a \tilde{\omega}^b$, are transformed as $A^{a'} = M^{a'}_a A^a$, $B_{a'} = B_a M^{a}_{a'}$ and $T^{a'}_{b'} = M^{a'}_a T^a_b M^{b}_{b'}$, respectively.
+
+  \begin{align}
+    \label{eq:2}
+    \boldsymbol{A}
+    & = A^{a}e_{a}\\
+    & = A^{a}e_{a'} M^{a'}_{a}\\
+    & = A^{a}M^{a'}_{a}e_{a'}\\
+    & = A^{a'} e_{a'}
+  \end{align}
+  implies $A^{a'} = A^{a}M^{a'}_{a}$
+
+  \begin{align}
+    \label{eq:3}
+    \boldsymbol{\tilde{B}}
+    & = B_b\tilde{\omega}^b\\
+    & = B_b \tilde{\omega}^{b'} M^{b}_{b'}\\
+    & = B_b M^{b}_{b'}\tilde{\omega}^{b'}\\
+    & = B_{b'}\tilde{\omega}^{b'}
+  \end{align}
+  implies $B_{a'} = B_{a} M^{a}_{a'}$.
+  Finally,
+  \begin{align}
+    \label{eq:4}
+    \boldsymbol{T}
+    & = T^{a}_b e_a \tilde{\omega}^b\\
+    & = T^{a}_b e_{a'}M^{a'}_{a}\tilde{\omega}^{b'}M^{b}_{b'}\\
+    & = T^{a}_{b}M^{a'}_{a}M^{b}_{b'}e_{a'}\tilde{\omega}^{b'}\\
+    & = T^{a'}_{b'}e_{a'}\tilde{\omega}^{b'}
+  \end{align}
+  implying $T^{a'}_{b'} = T^{a}_{b} M^{a'}_{a}M^{b}_{b'}$.
+  
 \item Using the Bianchi identities,
   \begin{equation}
     \label{eq:bianchi-identities}
@@ -28,5 +66,23 @@
     \label{eq:}
     2 \nabla^b \R{bd} - \nabla_d \R{} = 0 \Rightarrow \nabla^a\R{ab} - \frac{1}{2} \nabla^a (g_{ab}\R{}) = 0 \Rightarrow \nabla^a G_{ab} = 0
   \end{equation}
+
+\item Derive the curvature invariants $R^{ab}R_{ab}$ and $R$ for Schwarzschild and Kerr spacetime in the vacuum case.
+
+  Einstein's Field equation is given by
+  \begin{equation}
+    \label{eq:EFE}
+    R_{ab} + \frac{1}{2} g_{ab}R = 0
+  \end{equation}
+  contracting with $g^{ab}$ gives
+  \begin{equation}
+    \label{eq:}
+    g^{ab}R_{ab} + \frac{1}{2} g^{ab}g_{ab}R = 0 \Rightarrow R + R = 0 \Rightarrow R = 0
+  \end{equation}
+  From which it automatically follows that $R^{ab}R_{ab} = 0$.
+
+\item Exercise 2.1 of Baumgarte and Shapiro.
+\item Exercise 2.1 of Baumgarte and Shapiro.
+\item xercise 2.34 of Baumgarte and Shapiro.
 \end{enumerate}
 \end{document}
