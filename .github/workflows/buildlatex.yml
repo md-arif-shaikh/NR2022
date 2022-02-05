@@ -18,8 +18,8 @@ jobs:
           compiler: # optional, default is latexmk
           args: # optional, default is -pdf -file-line-error -interaction=nonstopmode
 #          extra_system_packages: # optional
-      - name: Upload Assignment 1
-        uses: actions/upload-artifact@v1
+      - name: Upload Solution pdfs
+        uses: actions/upload-artifact@v2
         with:
-          name: assignment_1.pdf
-          path: assignments/assignment_1.pdf
+          name: solutions
+          path: assignments/assignment_*.pdf
