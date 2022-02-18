@@ -95,10 +95,81 @@
       n^aa_a = n^a n^b \nabla_b n_a = \frac{1}{2}  n^b \nabla_b(n^an_a) = 0
     \end{equation}
 
-  \item
   \item 
+  \item \begin{equation}
+      \label{eq:alpha}
+      \alpha = \frac{1-M/(2r)}{1+M/(2r)},\qquad n^a = (1/\alpha, 0, 0, 0)
+    \end{equation}
+    \begin{align}
+      \label{eq:acceleration}
+      a_a
+      & = D_a \ln \alpha\\
+      & = (n^b n_a + \delta^b_a)\nabla_b \ln \alpha\\
+      & = n^b n_a \partial_b\ln\alpha + \partial_a\ln \alpha\\
+      & = n_a (1/\alpha)\partial_t\ln\alpha + \partial_r \ln\alpha \delta^r_a\\
+      & = 0 + \delta^r_a \frac{4Mr^2}{r^2 - M^2}\\
+      & = \delta^r_a \frac{4Mr^2}{r^2 - M^2}
+    \end{align}
   \end{enumerate}
   
-\item Exercise 2.34 of Baumgarte and Shapiro.
+\item Exercise 2.34 of Baumgarte and Shapiro.\\
+  \begin{enumerate}
+  \item Comparing the Kerr metric with Eq. 2.119 and 2.122 
+    \begin{equation}
+      \label{eq:metric-in-alpha-beta}
+      -\alpha^{-2} = g^{tt} \Rightarrow \alpha = \sqrt{-1/g^{tt}} = \sqrt{\frac{\left(a^2+r (r-2 M)\right) \left(a^2 \cos (2 \theta )+a^2+2 r^2\right)}{a^4+a^2 \cos (2 \theta ) \left(a^2+r (r-2 M)\right)+a^2 r (2 M+3 r)+2 r^4}},
+    \end{equation}
+    \begin{equation}
+      \label{eq:beta}
+      \beta_i = \delta_{\phi i} g_{t\phi} = -\frac{2 a M r \sin ^2(\theta )}{a^2 \cos ^2(\theta )+r^2}\delta_{i\phi}
+    \end{equation}
+    and
+    \begin{equation}
+      \label{eq:gamma}
+      \gamma_{ij} = \delta_{ij}g_{ij}
+    \end{equation}
+    $t^a = (1, 0, 0, 0) = \delta^a_t$ and hence
+    \begin{align}
+      \label{eq:tnorm}
+      t_at^a = g_{ab}t^at^b = g_{tt} = \frac{a^2 \sin ^2(\theta )-a^2+2 M r-r^2}{a^2 \cos ^2(\theta )+r^2}
+    \end{align}
+    So, $t_at^a$ is negative outside ergsosphere and positive inside the ergsosphere.
+  \item Evolution equation of the spatial metric is given by
+    \begin{equation}
+      \label{eq:evolution-of-spatial-metric}
+      \partial_t\gamma_{ij} = -2\alpha K_{ij} + D_i\beta_j + D_j\beta_i.
+    \end{equation}
+    As the spatial metric is time independent, the above equation gives (with equation from Ex. 2.30)
+    \begin{equation}
+      \label{eq:extrinsic-metric}
+      K_{ij} = \frac{1}{2\alpha}(\nabla_i\beta_j + \nabla_j\beta_i) = \frac{1}{2\alpha}(\partial_i\beta_j + \partial_j\beta_i - 2 \Gamma_{ij}^k \beta_k) = \frac{1}{2\alpha}(\partial_ig_{t\phi}\delta_{j\phi} + \partial_jg_{t\phi}\delta_{i\phi} - 2\Gamma_{ij}^\phi g_{t\phi}) ,
+    \end{equation}
+    and
+    \begin{equation}
+      \label{eq:christofell}
+      \Gamma^\phi_{rr} = \Gamma^\phi_{r\theta} = \Gamma^\phi_{\theta\theta} = \Gamma^\phi_{\phi\phi} = 0
+    \end{equation}
+    hence,
+    \begin{equation}
+      \label{eq:krtheta}
+      K_{rr} = 0, K_{r\theta} = 0, K_{r\phi} = \frac{1}{2\alpha}(\partial_rg_{t\phi} - 2\Gamma^\phi_{r\phi}), K_{\theta\theta} = 0, K_{\theta\phi} = \frac{1}{2\alpha}(\partial_\theta g_{t\phi}-2\Gamma^\phi_{\theta\phi}), K_{\phi\phi} = 0 
+    \end{equation}
+    In the limit $r\gg M$ and $r\gg a$, $\alpha \to 1$.
+    \begin{equation}
+      \label{eq:krphi}
+      K_{r\phi} = -\frac{1}{2\alpha}\frac{4 a M \sin ^2(\theta ) \left(a^4+a^2 \left(a^2-r^2\right) \cos (2 \theta )-3 a^2 r^2-6 r^4\right) \left(a^2 \cos (2 \theta )+a^2+2 r (r-2 M)\right)}{\left(a^2+r
+   (r-2 M)\right) \left(a^2 \cos (2 \theta )+a^2+2 r^2\right)^3}
+\end{equation}
+therefore becomes,
+\begin{equation}
+  \label{eq:krphi2}
+  K_{r\phi} = \frac{1}{2}\frac{6aM\sin^2\theta}{r^2} = \frac{3aM\sin^2\theta}{r^2}  
+\end{equation}
+Similarly,
+\begin{equation}
+  \label{eq:kthetaphi}
+  K_{\theta \phi} = - \frac{1}{2\alpha}\frac{16 a^3 M r \sin ^3(\theta ) \cos (\theta ) \left(a^2 \cos (2 \theta )+a^2+2 r (r-2 M)\right)}{\left(a^2 \cos (2 \theta )+a^2+2 r^2\right)^3} 
+\end{equation}
+  \end{enumerate}
 \end{enumerate}
 \end{document}
